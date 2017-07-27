@@ -154,7 +154,7 @@ function fetch_products_data()
 	// ajax call to fetch from json file
 	$.ajax({
 		method:"POST",
-		url:"assets/files/products.json",
+		url:"assets/data/products.json",
 		dataType:"json",
 		success:function(products)
 		{
