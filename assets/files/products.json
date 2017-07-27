@@ -1,0 +1,38 @@
+[
+{
+	"id":1,
+	"image_url":"assets/images/product-1.jpg",
+	"price":100,
+	"description": "Highlander Men T-shirt"
+},
+{
+	"id":2,
+	"image_url":"assets/images/product-2.jpg",
+	"price":200,
+	"description": "Highlander Men T-shirt"
+},
+{
+	"id":3,
+	"image_url":"assets/images/product-3.jpg",
+	"price":300,
+	"description": "Highlander Men T-shirt"
+},
+{
+	"id":4,
+	"image_url":"assets/images/product-4.jpg",
+	"price":400,
+	"description": "Highlander Men T-shirt"
+},
+{
+	"id":5,
+	"image_url":"assets/images/product-5.jpg",
+	"price":500,
+	"description": "Highlander Men T-shirt"
+},
+{
+	"id":6,
+	"image_url":"assets/images/product-6.jpg",
+	"price":600,
+	"description": "Highlander Men T-shirt"
+}
+]

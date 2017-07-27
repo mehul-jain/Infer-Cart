@@ -1,0 +1,63 @@
+@media only screen and (min-width: 768px) and (max-width: 1350px)
+{
+    * {
+        font-size: 14px;
+    }
+    .product {
+        width: 48%;
+        margin: 1%;
+    }
+    .checkout {
+        height: auto;
+    }
+    .details input[type=text], input[type=number], button, input[type=email] {
+    height: 20%;
+    border-radius: 5px;
+    padding: 10px;
+    line-height: 10px;
+    border: 1px solid #dddddd;
+    text-align: center;
+    font-size: 1em;
+    }
+    .details input::placeholder {
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    }
+}
+@media screen and (min-width: 300px) and (max-width: 768px) 
+{
+    * {
+        font-size: 12px;
+    }
+    .small-logo {
+        display: none;
+    }
+    .center-logo {
+        float: left;
+    }
+    .product {
+        clear: both;
+        width: 96%;
+        margin: 10px;
+    }
+    .details p, .buy p{
+        font-size: 1em;
+    }
+    .checkout {
+        width: 95%;
+        height: auto;
+    }
+    .details input[type=text], input[type=number], button, input[type=email] {
+    height: 20%;
+    border-radius: 5px;
+    padding: 5px;
+    line-height: 5px;
+    border: 1px solid #dddddd;
+    text-align: center;
+    font-size: 1em;
+    }
+    .details input::placeholder, input::placeholder{
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    }
+}
