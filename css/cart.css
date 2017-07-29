@@ -1,0 +1,170 @@
+    *{
+        box-sizing: border-box;
+        font-family: sans-serif;
+
+    }
+
+    body{
+        background-color: #eeeeee ;
+           
+            
+    }
+    .info-div{
+          background-image: url("../assets/images/pays.png");
+        background-size: cover;
+        height: 178px;                 
+    }
+
+    #items-div{
+        height: 500px;
+        width: 60%;       
+    
+    }
+
+    #side-div{
+        
+        width: 30%;
+        padding-bottom: 5%;
+        
+    }
+
+     #buttons-div{
+        width: 60%;
+        background-color: white ;
+        float: left;
+        min-width: 300px;
+        padding: 1% 2%;
+
+    }
+
+    .main-container{
+        background-color: white ;
+        float: left;
+        margin: 0% 2% ;
+        min-width: 300px;
+        padding: 0% 2%;
+    }
+
+.clearfix:after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+#container {
+    height: 430px;  
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#side-div .inner-div{
+     border-top: 0.25px solid lightgrey;
+    border-bottom: 0.25px solid lightgrey;
+  
+}   
+
+#buttons-div button{
+    margin: 0 1%;
+    padding: 13px;
+    float: right;
+    width: 200px;
+    box-shadow: 2px 2px 1px 0px grey;
+    border: none;
+    font-style: bold;
+    background-color: #ef6c00 ;
+    color: white;
+}
+
+#buttons-div button:hover{
+    background-color: #fb8c00 ;
+}
+
+.list-item{
+    padding: 2%;
+    border-top: 0.25px solid lightgrey;
+    border-bottom: 0.25px solid lightgrey; 
+}
+.list-item:hover{
+    box-shadow: 1px 1px 10px 2px grey;
+    z-index: 100;
+}
+
+.list-item p, .list-item span{
+    float: left;
+    padding:    3%;
+}
+
+.list-item img{
+    float: left;
+    height: 100px;
+    width: 100px;
+}
+.hidden{
+    display: none;
+}
+
+.card{
+        box-shadow: 1px 1px 10px 0px grey;
+        min-padding: 0.5%;
+
+}
+.label-left{
+    float: left;
+}
+.label-right{
+    float: right;
+}
+.round-button{
+    background-color: white;
+    color: black;
+
+    border:0.5px solid grey;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+.round-button:hover{
+    color: white;
+    background-color: black;
+
+}
+.qty{
+    width: 40px;
+    text-align: center;
+}
+
+section{
+    padding: 2%;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+     #items-div,#side-div, #buttons-div{
+        width: 100%;
+        margin: 1% auto;
+     } 
+
+
+    
+    .info-div{
+        height: 380px;                 
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    
+    #buttons-div button{
+        margin: 1% auto;
+        width: 98%;
+        float: none;
+
+    }
+
+    .info-div{
+        height: 178px;                 
+    }
+
+
+}

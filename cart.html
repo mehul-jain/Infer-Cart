@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cart</title>
+    <link rel="stylesheet" type="text/css" href="css/cart.css">
+</head>
+<body>
+    <header>
+            <!-- for navbar -->
+    </header>
+    <section>
+        <div id="items-div" class="main-container card" >
+            <h1>MY CART</h1>            <!-- the list of items in the cart -->
+            <div id="container">
+               <div id=item class='list-item clearfix hidden'>
+                <img src=''/>
+                <p class="desc">item1</p> 
+                <p class="price">Price</p>
+                <span class="clearfix">
+                    <button class="round-button minusBtn">-</button>
+                    <input class="qty" type="text" value="1" />
+                    <button class="round-button plusBtn">+</button>
+                </span>
+            </div>
+
+        </div>
+    </div>
+
+<!-- the right side section where bill is shown -->
+    <div id="side-div" class="main-container card">
+        <h2 class="heading">Your Bill </h2> 
+        <div class="inner-div">
+            <span class="clearfix"><p class="label-left">Total amount  :</p> <p class="label-right" id="total-amount">100</p></span>
+            <span class="clearfix"><p class="label-left">Discount :</p> <p class="label-right" id="discount-amount">0</p></span>
+            <hr/>
+            <span class="clearfix"><b><p class="label-left">Total payable :</p> <p class="label-right" id="payable-amount">100</p></b></span>
+            <hr/>
+        </div>  
+        <div class="info-div">
+            
+        </div>            
+    </div>
+
+    <!-- the lower buttons -->
+    <div id="buttons-div" class="main-container card">
+        <button id="buy-button">BUY </button>
+        <button id="continue-button"> < CONTINUE SHOPPING</button>
+
+    </div>
+
+
+
+</section>
+
+
+<footer>
+
+</footer>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/cart.js"></script>
+
+</body>
+</html>
