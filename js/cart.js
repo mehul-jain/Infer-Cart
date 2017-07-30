@@ -1,18 +1,42 @@
 
 $(document).ready(function(){
-  $.getJSON("/assets/data/products.json", function (data) {
-
-   products_populator(data);
-   init();    // initialises the event Listeners
-
- })
-
-
 }); // end of document ready
 
+function searchCartArray(product_id){
+    for (var index=0; index< cartArray.length; index++) {
+        if (cartArray[index].id == product_id) {
+            return index;
+        }
+    }
+    return null;
+}
 
-function init(){
+function addItemToCart(itemId,itemQty)
+{
+  var index=searchCartArray(itemId);
+  if(index==null)
+  cartArray.push({id:itemId,qty:itemQty});
+  else 
+  cartArray[index].qty+=1;
+}
 
+function removeFromCart(itemId)
+{
+  console.log(itemId);
+  var index=searchCartArray(itemId);
+  if(index!=null)
+  {
+    if(cartArray[index].qty>0)
+    {
+      cartArray[index].qty-=1;
+    }
+
+    if(cartArray[index].qty==0)
+      cartArray.splice(index,1);
+  }
+
+}
+function init_cart(){
   document.getElementById("buy-button").addEventListener("click",function(){    // BUY button Listener
     alert("Purchase Successful");
   // checck if account is filled else redirect to account page
@@ -25,48 +49,35 @@ function init(){
   var plusbtn=document.getElementsByClassName("plusBtn");
   var minusbtn=document.getElementsByClassName("minusBtn");
 
-
   for(var index=0;index<plusbtn.length;index++)         // add click listener for each plus button
   {
-    plusbtn[index].addEventListener("click",function(e){
+      plusbtn[index].addEventListener("click",function(e){
       var id=e.target.parentNode.parentNode.id;
        // gets the id of the parent div
       var element=document.getElementById(id);
+      var product_id=parseInt(element.getAttribute('data-id'));
       element=element.getElementsByClassName("qty");
-      element[0].value++;                              // update the number of items in the html tag
-        for(var cartIndex=0;cartIndex<cartArray.length;cartIndex++)
-        {
-                if(cartArray[cartIndex].id==id)
-                {
-                  break;
-                }
-
-        }
-        cartArray[cartIndex].qty=element[0].value;    // update the number of items in the array
+      var quantity=parseInt(element[0].value);
+      increaseQuantity(product_id);
+      quantity++;                              // update the number of items in the html tag
+      element[0].value=quantity;
     });
   }
 
 
-  for(var index=0;index<plusbtn.length;index++)   // add click listener for each minus button
+  for(var index=0;index<minusbtn.length;index++)   // add click listener for each minus button
   {
-    minusbtn[index].addEventListener("click",function(e){
+      minusbtn[index].addEventListener("click",function(e){
       var id=e.target.parentNode.parentNode.id;
-     // gets the id of the parent div
+      // gets the id of the parent div
       var element=document.getElementById(id);
+      var product_id=parseInt(element.getAttribute('data-id'));
       element=element.getElementsByClassName("qty");
-    
-       
-        for(var cartIndex=0;cartIndex<cartArray.length;cartIndex++)
-        {
-                if(cartArray[cartIndex].id==id)
-                {
-                  if(cartArray[cartIndex].qty>0)
-                  cartArray[cartIndex].qty--;
-                  element[0].value=cartArray[cartIndex].qty;
-                }
-
-        }
-
+      var quantity=parseInt(element[0].value);
+      decreaseQuantity(product_id);
+      if(quantity>0)
+      quantity--;                              // update the number of items in the html tag
+      element[0].value=quantity;
     });
   }
 
@@ -74,52 +85,28 @@ function init(){
 
 
 // checks the array and get data from the json and populates list
-function products_populator(products)
+function cart_populator()
 {
+  console.log(cartArray);
 	var container=$("#container");
+  // clean container
+  container.find(".list-item").remove();
 	for(var cartIndex=0;cartIndex<cartArray.length;cartIndex++)
   {
     for(var index=0;index<products.length;index++)
     {
       if(cartArray[cartIndex].id==products[index].id)
-
       {       
         var product_clone=$("#item").clone();
-        product_clone.find(".qty").html(cartArray[cartIndex].qty)
+        product_clone.find(".qty").val(cartArray[cartIndex].qty);
         product_clone.find("img").attr("src",products[index].image_url);
         product_clone.find(".desc").html(products[index].description);
         product_clone.find(".price").html(products[index].price);
-      product_clone[0].id=products[index].id;         /// Mehul make this modification in ur code. only this line
-      container.append(product_clone);
-      $(product_clone).css("display","block");
+        product_clone.attr('data-id',products[index].id);        
+        container.append(product_clone);
+        $(product_clone).css("display","block");
 
-    }
+      }
   }
 }
-}
-
-
-// demo array remove while integration
-var cartArray=[{
-  "id":1,
-  "qty":1
-},
-{
-  "id":2,
-  "qty":5
-},
-{
-  "id":3,
-  "qty":4
-},
-{
-  "id":4,
-  "qty":4
-}];
-
-
-
-function addItem(itemId,itemQty)
-{
-  cartArray.push({id:itemId,qty:itemQty});
 }

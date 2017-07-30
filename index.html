@@ -16,6 +16,7 @@
     <!-- STYLE -->
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/cart.css">
     <link rel="stylesheet" type="text/css" href="css/main-xs.css">
     <!-- /STYLE -->
 
@@ -33,50 +34,43 @@
 
     <div class="wrapper noselect">
         <section class="Header" id="header"> <!-- NAVBAR -->
-            <di` class="nav-bar clearfix">
+            <div class="nav-bar clearfix">
                 <img src="assets/icons/infrrd_logo.png" class="left small-logo">
                 <span class="center-logo img-center">INFRRDCART</span>
                 <a href="#header" id="cart" ><span class="right cart-number" id="cart-number"></span><i class="fa fa-shopping-cart cart right" aria-hidden="true"></i></a>
             </div>
         </section><!-- /NAVBAR -->
 
-        <section><!-- CART -->
-            <div class="checkout clearfix" id="checkout">
-                <div class="left details clearfix">
-                    <h3>Your Details</h3>
-                    <br>
-                    <form name="myForm">
-                        <input type="text" name="Name" placeholder="Full Name" id="name" required>
-                        <input type="email" name="Email" placeholder="Email" id="email" required>
-                        <input type="number" name="Phone" placeholder="Phone Number" id="phone" required>
-                        <textarea placeholder="Address" name="Address" id="address" minlength=25 maxlength=250 required></textarea>
-                        <button type="button" id="validate">
-                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                        </button>
-                    </form>
-                </div>
-                <div class="verticalLine">
-                  
-                </div>
-                <div class="right buy clearfix">
-                <span class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
-                <h3>Your Order</h3>
-                    <div class="display-quantity clearfix">
-                        <br>
-                        <br>
-                        <p id="quan"></p> <p class="quan" id="quantity"> </p>
-                    </div>
-                    <div class="display-price clearfix">
-                        <br>
-                        <br>
-                        <p id="pric"></p> <p class="pric" id="price"> </p>
-                    </div>
-                    <div class="buy-button">
-                        <button type="button" id="buy-button"></button>
-                    </div>                  
+        <section class='cart-section hidden'>
+            <div id="items-div" class="main-container card" >
+                <h1>MY CART</h1>            <!-- the list of items in the cart -->
+                <div id="container">
                 </div>
             </div>
-        </section><!-- /CART -->
+
+        <!-- the right side section where bill is shown -->
+            <div id="side-div" class="main-container card">
+                <h2 class="heading">Your Bill </h2> 
+                <div class="inner-div">
+                    <span class="clearfix"><p class="label-left">Total amount  :</p> <p class="label-right" id="total-amount">100</p></span>
+                    <span class="clearfix"><p class="label-left">Discount :</p> <p class="label-right" id="discount-amount">0</p></span>
+                    <hr/>
+                    <span class="clearfix"><b><p class="label-left">Total payable :</p> <p class="label-right" id="payable-amount">100</p></b></span>
+                    <hr/>
+                </div>  
+                <div class="info-div">
+                    
+                </div>            
+            </div>
+
+        <!-- the lower buttons -->
+            <div id="buttons-div" class="main-container card">
+                <button id="buy-button">BUY </button>
+                <button id="continue-button">  CONTINUE SHOPPING ></button>
+
+            </div>
+
+        </section>
 
         <section class="Jumbo"> <!-- Carousel -->
             <div class="jumbotron clearfix">
@@ -103,24 +97,37 @@
     <div class="product hidden" id="product">
         <img class="product-image" src="">
         <div class="product-info clearfix">
-            <div class="minus" id="1">
+            <div class="quantity-minus">
                 <span class="minus-icon"><i class="fa fa-minus-circle" aria-hidden="true"></i></span>
             </div>
             <div class="info">
                 <h3 class="description">Some description here </h3>
                 <h3><span class="strike">&#8377; 749</span><span class="red"> (45% OFF)</span></h3>
                 <h3>&#8377;<span class="price">000</span></h3>
-                <h3 id="p1">0</h3>
+                <h3 class="quantity-value">0</h3>
             </div>
-            <div class="plus" id="1">
+            <div class="quantity-plus">
                 <span class="plus-icon"><i class="fa fa-plus-circle" aria-hidden="true"></i></span>
             </div>
         </div>
     </div> 
-    <!-- product cloner ends -->   
+    <!-- product cloner ends -->
+    <!-- cart cloner starts -->
+    <div id="item" class='list-item clearfix hidden'>
+        <img src=''/>
+        <p class="desc">item1</p> 
+        <p class="price">Price</p>
+        <span class="clearfix">
+        <button class="round-button minusBtn">-</button>
+        <input class="qty" type="text" value="1" />
+        <button class="round-button plusBtn">+</button>
+        </span>
+    </div> 
+    <!-- cart cloner ends -->     
     <!-- Scripts -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
     <!-- /Scripts -->
 </body>
 </html>
