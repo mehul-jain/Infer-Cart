@@ -86,7 +86,6 @@
 }
 .list-item:hover{
     box-shadow: 1px 1px 10px 2px grey;
-    z-index: 100;
 }
 
 .list-item p, .list-item span{
@@ -168,3 +167,4 @@ section{
 
 
 }
+

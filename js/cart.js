@@ -16,6 +16,7 @@ function init(){
   document.getElementById("buy-button").addEventListener("click",function(){    // BUY button Listener
     alert("Purchase Successful");
   // checck if account is filled else redirect to account page
+
   });
 
   document.getElementById("continue-button").addEventListener("click",function(){ // Continue Button
@@ -123,3 +124,5 @@ function addItem(itemId,itemQty)
 {
   cartArray.push({id:itemId,qty:itemQty});
 }
+
+
