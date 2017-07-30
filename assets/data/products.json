@@ -2,37 +2,43 @@
 {
 	"id":1,
 	"image_url":"assets/images/product-1.jpg",
-	"price":100,
-	"description": "Highlander Men T-shirt"
+	"price":600,
+    "discount":50,
+	"description": "Dorbz: Tyrion"
 },
 {
 	"id":2,
 	"image_url":"assets/images/product-2.jpg",
-	"price":200,
-	"description": "Highlander Men T-shirt"
+	"price":1100,
+    "discount":200,
+	"description": "Lannister Champagne Flute"
 },
 {
 	"id":3,
 	"image_url":"assets/images/product-3.jpg",
-	"price":300,
-	"description": "Highlander Men T-shirt"
+	"price":1625,
+    "discount":325,
+	"description": "I Drink & I Know Things T-Shirt"
 },
 {
 	"id":4,
 	"image_url":"assets/images/product-4.jpg",
-	"price":400,
-	"description": "Highlander Men T-shirt"
+	"price":12195,
+    "discount":1225,
+	"description": "Lannister 1/6 Scale Figure"
 },
 {
 	"id":5,
 	"image_url":"assets/images/product-5.jpg",
-	"price":500,
-	"description": "Highlander Men T-shirt"
+	"price":719,
+    "discount":120,
+	"description": "Tyrion Poster [11x17]"
 },
 {
 	"id":6,
 	"image_url":"assets/images/product-6.jpg",
-	"price":600,
-	"description": "Highlander Men T-shirt"
+	"price":1450,
+    "discount":200,
+	"description": "Lannister Ruled Pocket Journal"
 }
 ]
