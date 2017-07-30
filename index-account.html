@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- META -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Shopping made simple">
+    <meta name="keywords" content="Apparels & more">
+    <meta name="author" content="Aaron R">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- /META -->
+
+    <!-- FAVICON -->
+    <link rel="icon" href="assets/icons/infrrd_logo.png" type="image/gif" sizes="16x16">
+    <!-- /FAVICON -->
+
+    <!-- STYLE -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/main-xs.css">
+    <link rel="stylesheet" type="text/css" href="css/account.css">
+    <!-- /STYLE -->
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <!-- /FONTS -->
+
+    <!-- TITLE -->
+    <title>InfrrdCart</title>
+    <!-- /TITLE -->
+</head>
+<body>
+
+    <div class="wrapper noselect">
+        <section class="Header" id="header"> <!-- NAVBAR -->
+            <div class="nav-bar clearfix">
+                <img src="assets/icons/infrrd_logo.png" class="left small-logo">
+                <span class="center-logo img-center">INFRRDCART</span>
+                <a href="#header" id="cart" ><span class="right cart-number" id="cart-number"></span><i class="fa fa-shopping-cart cart right" aria-hidden="true"></i></a>
+              <!-- ACCOUNT -->  <a href="#account" id="info"><span class="right account"><em>Account</em></span></a>
+              <!-- /ACCOUNT -->
+
+            </div>
+        </section><!-- /NAVBAR -->
+
+        <section><!-- CART -->
+            <div class="checkout clearfix" id="checkout">
+                <div class="left details clearfix">
+                    <h3>Your Details</h3>
+                    <br>
+                    <form name="myForm">
+                        <input type="text" name="Name" placeholder="Full Name" id="name" required>
+                        <input type="email" name="Email" placeholder="Email" id="email" required>
+                        <input type="number" name="Phone" placeholder="Phone Number" id="phone" required>
+                        <textarea placeholder="Address" name="Address" id="address" minlength=25 maxlength=250 required></textarea>
+                        <button type="button" id="validate">
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="verticalLine">
+                  
+                </div>
+                <div class="right buy clearfix">
+                <span class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+                <h3>Your Order</h3>
+                    <div class="display-quantity clearfix">
+                        <br>
+                        <br>
+                        <p id="quan"></p> <p class="quan" id="quantity"> </p>
+                    </div>
+                    <div class="display-price clearfix">
+                        <br>
+                        <br>
+                        <p id="pric"></p> <p class="pric" id="price"> </p>
+                    </div>
+                    <div class="buy-button">
+                        <button type="button" id="buy-button"></button>
+                    </div>                  
+                </div>
+            </div>
+        </section><!-- /CART -->
+
+        <section><!-- ACCOUNT -->
+            <div class="account-info " id="account-info">
+                <div class="left account-details clearfix">
+                    <h3>Your Details</h3>
+                    <form class="my-form" name="accountForm">
+                        <input class="form-input" type="text" name="Fname" placeholder="First Name" id="fname" required>
+                        <input class="form-input" type="text" name="Lname" placeholder="Last Name" id="lname" required>
+                        <input class="form-input" type="email" name="AEmail" placeholder="Email" id="aemail" required>
+                        <input class="form-input" type="number" name="APhone" placeholder="Phone Number" id="aphone" required>
+                        <input class="form-input" type="text" placeholder="Address Line 1" name="Address1" id="aaddress" minlength=20  required>
+                        <input class="form-input" type="text" placeholder="Address Line 2" name="Address2">
+                        <span><input type="text" width="15" name="State" placeholder="State" id="state" required>
+                        <input type="number" name="Pincode" placeholder="Pincode" id="pin" required></span>
+
+                        <button type="button" id="validate_account">
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="right account-close clearfix">
+                    <span class="close-account"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+                </div>
+            </div>
+        </section><!-- /ACCOUNT -->
+
+        <section class="Jumbo"> <!-- Carousel -->
+            <div class="jumbotron clearfix">
+                <div class="jumbotron-text-container">
+                    <span class="jumborton-text">Autumn Collection</span><br><br><br>
+                    <span class="jumborton-text-small">Now in store</span><br><br>
+                </div>           
+            </div>
+        </section><!-- /Carousel -->
+
+       <section class="Product-section"> <!-- Products -->
+            <div class="all-products clearfix">
+                <div class="product">
+                    <img class="product-image" src="assets/images/product-1.jpg">
+                    <div class="product-info clearfix">
+                        <div class="minus" id="1">
+                            <span class="minus-icon"><i class="fa fa-minus-circle" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="info">
+                            <h3>Highlander Men T-shirt</h3>
+                            <h3><span class="strike">&#8377; 749</span><span class="red"> (45% OFF)</span></h3>
+                            <h3>&#8377; 411</h3>
+                            <h3 id="p1">0</h3>
+                        </div>
+                        <div class="plus" id="1">
+                            <span class="plus-icon"><i class="fa fa-plus-circle" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="product-image" src="assets/images/product-2.jpg">
+                    <div class="product-info clearfix">
+                        <div class="minus" id="2">
+                            <span class="minus-icon"><i class="fa fa-minus-circle" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="info">
+                            <h3>Nike Men Black Sneakers</h3>
+                            <h3><span class="strike">&#8377; 4,795</span><span class="red"> (30% OFF)</span></h3>
+                            <h3>&#8377; 3,356</h3>
+                            <h3 id="p2">0</h3>
+                        </div>
+                        <div class="plus" id="2">
+                            <span class="plus-icon"><i class="fa fa-plus-circle" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="product-image" src="assets/images/product-5.jpg">
+                    <div class="product-info clearfix">
+                        <div class="minus" id="3">
+                            <span class="minus-icon"><i class="fa fa-minus-circle" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="info">
+                            <h3>Levis Blue Slim Straight Jeans</h3>
+                            <h3><span class="strike">&#8377; 1,999</span><span class="red"> (25% OFF)</span></h3>
+                            <h3>&#8377; 1,499</h3>
+                            <h3 id="p3">0</h3>
+                        </div>
+                        <div class="plus" id="3">
+                            <span class="plus-icon"><i class="fa fa-plus-circle" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="product-image" src="assets/images/product-4.jpg">
+                    <div class="product-info clearfix">
+                        <div class="minus" id="4">
+                            <span class="minus-icon"><i class="fa fa-minus-circle" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="info">
+                            <h3>Nike Unisex FUTURA White Cap</h3>
+                            <h3><span class="strike">&#8377; 1,295</span><span class="red"> (40% OFF)</span></h3>
+                            <h3>&#8377; 777</h3>
+                            <h3 id="p4">0</h3>
+                        </div>
+                        <div class="plus" id="4">
+                            <span class="plus-icon"><i class="fa fa-plus-circle" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="product-image" src="assets/images/product-6.jpg">
+                    <div class="product-info clearfix">
+                        <div class="minus" id="5">
+                            <span class="minus-icon"><i class="fa fa-minus-circle" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="info">
+                            <h3>GRITSTONES Blue T-shirt</h3>
+                            <h3><span class="strike">&#8377; 599</span><span class="red"> (25% OFF)</span></h3>
+                            <h3>&#8377; 449</h3>
+                            <h3 id="p5">0</h3>
+                        </div>
+                        <div class="plus" id="5">
+                            <span class="plus-icon"><i class="fa fa-plus-circle" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="product-image" src="assets/images/product-3.jpg">
+                    <div class="product-info clearfix">
+                        <div class="minus" id="6">
+                            <span class="minus-icon"><i class="fa fa-minus-circle" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="info">
+                            <h3>Fossil Touchscreen Smart Watch</h3>
+                            <h3><span class="strike">&#8377; 19,995</span><span class="red"> (&#8377; 5,998 OFF)</span></h3>
+                            <h3>&#8377; 13,996</h3>
+                            <h3 id="p6">0</h3>
+                        </div>
+                        <div class="plus" id="6">
+                            <span class="plus-icon"><i class="fa fa-plus-circle" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- /Products -->
+
+        <section><!-- Footer -->
+            <div class="footer">
+                <p>&copy; INFRRDCART 2017 <span class="created">Made with by <i class="fa fa-heart" aria-hidden="true"></i> Aaron R</span></p> 
+            </div>
+        </section><!-- /Footer -->
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/account.js"></script>
+    <!-- /Scripts -->
+</body>
+</html>
