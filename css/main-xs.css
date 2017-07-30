@@ -10,6 +10,11 @@
     .checkout {
         height: auto;
     }
+    .small-logo {
+        float: left;
+        height: 3%;
+        width: 3%;
+    }
     .details input[type=text], input[type=number], button, input[type=email] {
     height: 20%;
     border-radius: 5px;
@@ -30,10 +35,12 @@
         font-size: 12px;
     }
     .small-logo {
-        display: none;
+        float: left;
+        height: 4%;
+        width: 4%;
     }
     .center-logo {
-        float: left;
+        display: none;
     }
     .product {
         clear: both;
