@@ -43,8 +43,8 @@ function init_cart(){
   });
 
   document.getElementById("continue-button").addEventListener("click",function(){ // Continue Button
-    alert("Continue ?");
-  });
+    ToggleCartPanel();
+    });
 
   var plusbtn=document.getElementsByClassName("plusBtn");
   var minusbtn=document.getElementsByClassName("minusBtn");

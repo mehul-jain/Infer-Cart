@@ -10,7 +10,7 @@
     .checkout {
         height: auto;
     }
-    .details input[type=text], input[type=number], button, input[type=email] {
+    .details input[type=text], input[type=number], input[type=email] {
     height: 20%;
     border-radius: 5px;
     padding: 10px;

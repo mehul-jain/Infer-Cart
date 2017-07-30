@@ -1,0 +1,163 @@
+/*new class for Account*/
+.account-section{
+    position: fixed;
+    z-index:1;
+    left:50%;
+    top:50%;
+    width: 100%;
+    height: auto;
+    padding: 1%;
+    background-color: rgba(243,243,232,0.5);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    transition: all ease-in-out 1s;
+}
+.account-info {
+    width:50%;
+    margin:auto;
+    border-radius: 20px;    
+
+}
+.close-account {
+    float: right;
+    font-size: 20px;
+}
+.close-account:hover {
+    cursor: pointer;
+    color: black;
+}
+.account-close{
+    top:10%;
+    left:70%;
+    position: absolute;
+    padding: 1%;
+    text-align: center;
+}
+.show-account{
+    display: block;
+    margin-top: 2vw; 
+    transition: all 5s ease-in-out;
+}
+.account-details,.feedback-form{
+    margin-top: 10%;    
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+    text-align: center;
+    float: left;
+    background-color: white;
+    border-radius: 20px;
+}
+/*Edit this*/
+.account-details input[type=text], input[type=number], textarea, input[type=email].form-input {
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    padding: 10px;
+    line-height: 10px;
+    border: 1px solid #dddddd;
+    text-align: center;
+    margin-bottom: 4%;
+    font-size: 1em;
+}
+.account-details input::placeholder, textarea::placeholder {
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+}
+.account-details h3, .buy h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2em;
+    /*color: white;*/
+}
+.buy p{
+    font-family: 'Roboto Slab', serif;
+    color: white;
+    float: left;
+    margin-left: 15%;
+    font-size: 200%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.account-details button {
+    font-family: 'Roboto Slab', serif;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    line-height: 10px;
+    border: 1px solid #dddddd;
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 2em;
+    background-color: green;
+    border: none;
+    color: white;
+}
+.buy-button button {
+    font-family: 'Roboto Slab', serif;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    line-height: 10px;
+    border: 1px solid #dddddd;
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 2em;
+    border: none;
+    color: white;
+    background-color: green;
+    display: none;
+}
+.account-details button:hover {
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.state-width{
+    width: 50%;
+}
+
+/*End this*/
+.show{
+    display: block;
+    margin-top: 20px; 
+}
+/*For Account text in html*/
+.account{
+    padding-right: 13px;
+    color:white;
+    font-size: 14px;
+    font-family: Roboto, Arial, sans-serif;
+}
+/* for account text on hover*/
+#info span:hover{
+    color: black;
+}
+.account-details input[name=APhone], input[name=AEmail], input[name=Lname], input[name=Address1], input[name=Address2], input[name=Fname]{
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    padding: 10px;
+    line-height: 10px;
+    border: 1px solid #dddddd;
+    text-align: center;
+    margin-bottom: 4%;
+    font-size: 1em;
+}
+.account-details input[name=Pincode], input[name=State]{
+    width: 49%;
+    height: 35px;
+    border-radius: 10px;
+    padding: 10px;
+    line-height: 10px;
+    border: 1px solid #dddddd;
+    text-align: center;
+    margin-bottom: 4%;
+    font-size: 1em;
+}
+

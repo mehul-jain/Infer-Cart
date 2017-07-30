@@ -222,7 +222,7 @@ body {
     float: left;
     opacity: 0.2;
 }
-.details input[type=text], input[type=number], textarea, input[type=email] {
+/*.details input[type=text], input[type=number], textarea, input[type=email] {
     width: 100%;
     height: 50px;
     border-radius: 10px;
@@ -233,7 +233,7 @@ body {
     margin-bottom: 5%;
     font-size: 1em;
     padding: 30px;
-}
+}*/
 .details input::placeholder, textarea::placeholder {
     text-align: center;
     font-family: 'Roboto Slab', serif;
