@@ -102,20 +102,8 @@ function products_populator(products)
 
 // demo array remove while integration
 var cartArray=[{
-  "id":1,
-  "qty":1
-},
-{
   "id":2,
-  "qty":5
-},
-{
-  "id":3,
-  "qty":4
-},
-{
-  "id":4,
-  "qty":4
+  "qty":1
 }];
 
 

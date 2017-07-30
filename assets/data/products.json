@@ -1,38 +1,68 @@
 [
 {
 	"id":1,
-	"image_url":"assets/images/product-1.jpg",
-	"price":100,
-	"description": "Highlander Men T-shirt"
+	"image_url":"assets/images/dragon.png",
+	"price":99999999,
+	"description": "Drigaris the dragon"
 },
 {
 	"id":2,
-	"image_url":"assets/images/product-2.jpg",
+	"image_url":"assets/images/cercisknife.png",
 	"price":200,
-	"description": "Highlander Men T-shirt"
+	"description": "Cersei's knife"
 },
 {
 	"id":3,
-	"image_url":"assets/images/product-3.jpg",
+	"image_url":"assets/images/coin2.png",
 	"price":300,
-	"description": "Highlander Men T-shirt"
+	"description": "Thargarian Coin"
 },
 {
 	"id":4,
-	"image_url":"assets/images/product-4.jpg",
-	"price":400,
-	"description": "Highlander Men T-shirt"
+	"image_url":"assets/images/dragoneggs.png",
+	"price":1000,
+	"description": "Three dragon eggs. "
 },
 {
 	"id":5,
-	"image_url":"assets/images/product-5.jpg",
+	"image_url":"assets/images/drogosKnife.png",
 	"price":500,
-	"description": "Highlander Men T-shirt"
+	"description": "Datrokie knife"
 },
 {
 	"id":6,
-	"image_url":"assets/images/product-6.jpg",
+	"image_url":"assets/images/handOfKing.png",
 	"price":600,
-	"description": "Highlander Men T-shirt"
+	"description": "The Kings Hand emblom"
+},
+{
+	"id":7,
+	"image_url":"assets/images/images.png",
+	"price":600,
+	"description": "Baby Dragon"
+},
+{
+	"id":8,
+	"image_url":"assets/images/minister.png",
+	"price":600,
+	"description": "Council minister emblom"
+},
+{
+	"id":9,
+	"image_url":"assets/images/starkCoin.png",
+	"price":600,
+	"description": "Starks Coin"
+},
+{
+	"id":10,
+	"image_url":"assets/images/unsullied.png",
+	"price":600,
+	"description": "Unsullied Army Man"
+},
+{
+	"id":11,
+	"image_url":"assets/images/valerianSword.png",
+	"price":600,
+	"description": "Valerian Sword"
 }
 ]
