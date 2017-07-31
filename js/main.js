@@ -9,6 +9,7 @@ var cartArray = [];
 var cartCount = [];
 var totalPrice=0;
 var totalquantity=0;
+var priceDiscount=0;
 document.querySelector('#cart-number').innerHTML = cart;
 fetch_products_data();
 /* Nav-Bar opacity */
@@ -134,7 +135,10 @@ function products_cloner(products)
 		product_clone.find(".product-info").parent().attr("data-id",products[index].id);
 		product_clone.find(".product-image").attr("src",products[index].image_url);
 		product_clone.find(".info .description").html(products[index].description);
-		product_clone.find(".info .price").attr("data-price",products[index].price).html(products[index].price);
+		product_clone.find(".info .price").attr("data-price",products[index].price).html(products[index].price-products[index].discount);
+		product_clone.find(".info .strike").html("&#8377;"+products[index].price);
+		product_clone.find(".info .red").attr("data-discount",products[index].discount).html("&nbsp;&nbsp; &#8377;"+products[index].discount);
+
 		product_clone.find(".info .quantity-value").attr("data-quantity",0).html("0");
 		container.append(product_clone);
 	}
@@ -146,11 +150,13 @@ function decreaseQuantity(product_id)
 	var $product_selector=$('#product[data-id="'+product_id+'"]');
 	var product_price=parseInt($product_selector.find(".price").attr("data-price"));
 	var quantity=parseInt($product_selector.find(".quantity-value").attr("data-quantity"));
+	var discount=parseInt($product_selector.find(".info .red").attr("data-discount"));
 	if(quantity>0)
 	{
 		quantity-=1;
         totalquantity-=1;
-        totalPrice-=product_price;
+        totalPrice-=(product_price-discount);
+		priceDiscount-=discount;
 		$product_selector.find(".quantity-value").attr("data-quantity",quantity).html(quantity);
 		removeFromCart(product_id);
 		updatecartvalue();
@@ -164,12 +170,14 @@ function increaseQuantity(product_id)
 	var product_id=parseInt(product_id);
 	var $product_selector=$('#product[data-id="'+product_id+'"]');
 	var product_price=parseInt($product_selector.find(".price").attr("data-price"));
+	var discount=parseInt($product_selector.find(".info .red").attr("data-discount"));
 	var quantity=parseInt($product_selector.find(".quantity-value").attr("data-quantity"));
 	if(quantity<20)
 	{
 		quantity+=1;
         totalquantity+=1;
-        totalPrice+=product_price;
+        totalPrice+=(product_price-discount);
+		priceDiscount+=discount;
 		$product_selector.find(".quantity-value").attr("data-quantity",quantity).html(quantity);
 		addItemToCart(product_id,quantity);
 		updatecartvalue();
@@ -184,8 +192,9 @@ function updatecartvalue()
 }
 function updateTotalprice()
 {
+	$("#discount-amount").html(priceDiscount);
 	$("#total-amount").html(totalPrice);
-	$("#payable-amount").html(totalPrice);	
+	$("#payable-amount").html(totalPrice-priceDiscount);	
 }
 function ToggleCartPanel()
 {
