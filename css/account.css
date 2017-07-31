@@ -3,9 +3,9 @@
     position: fixed;
     z-index:1;
     left:50%;
-    top:50%;
-    width: 100%;
-    height: auto;
+    top:40%;
+    width: 80%;
+    height: 80%;
     padding: 1%;
     background-color: rgba(243,243,232,0.5);
     -webkit-transform: translateX(-50%) translateY(-50%);
